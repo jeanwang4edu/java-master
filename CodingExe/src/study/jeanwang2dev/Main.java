@@ -52,8 +52,11 @@ public class Main {
 //        System.out.println( DigitSumChallenge.sumDigits(-1569) );
 //        System.out.println( DigitSumChallenge.sumDigits(9) );
 
-       // System.out.println(NumberPalindrome.isPalindrome(-12860533));
-        System.out.println( FirstLastDigitSum.sumFirstAndLastDigit(245769) );
+//        System.out.println(NumberPalindrome.isPalindrome(-12860533));
+//        System.out.println( FirstLastDigitSum.sumFirstAndLastDigit(245769) );
 
+        System.out.println(EvenDigitSum.getEvenDigitSum(123456789));
+        System.out.println(EvenDigitSum.getEvenDigitSum(252));
+        System.out.println(EvenDigitSum.getEvenDigitSum(-22));
     }
 }
