@@ -55,8 +55,12 @@ public class Main {
 //        System.out.println(NumberPalindrome.isPalindrome(-12860533));
 //        System.out.println( FirstLastDigitSum.sumFirstAndLastDigit(245769) );
 
-        System.out.println(EvenDigitSum.getEvenDigitSum(123456789));
-        System.out.println(EvenDigitSum.getEvenDigitSum(252));
-        System.out.println(EvenDigitSum.getEvenDigitSum(-22));
+//        System.out.println(EvenDigitSum.getEvenDigitSum(123456789));
+//        System.out.println(EvenDigitSum.getEvenDigitSum(252));
+//        System.out.println(EvenDigitSum.getEvenDigitSum(-22));
+
+        System.out.println(SharedDigit.hasSharedDigit(12, 23));
+        System.out.println(SharedDigit.hasSharedDigit(9, 99));
+        System.out.println(SharedDigit.hasSharedDigit(15, 55));
     }
 }
