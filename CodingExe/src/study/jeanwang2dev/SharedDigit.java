@@ -10,9 +10,9 @@ public class SharedDigit {
         int digit1 = numOne % 10;
         int digit2 = numOne / 10;
 
-        int digit3 = numTwo % 10;
-        int digit4 = numTwo / 10;
+        int digitA = numTwo % 10;
+        int digitB = numTwo / 10;
 
-        return digit1 == digit3 || digit1 == digit4 || digit2 == digit3 || digit2 == digit4;
+        return digit1 == digitA || digit1 == digitB || digit2 == digitA || digit2 == digitB;
     }
 }
