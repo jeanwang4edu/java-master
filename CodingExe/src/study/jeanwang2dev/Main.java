@@ -73,6 +73,10 @@ public class Main {
 //        System.out.println(GreatestCommonDivisor.getGreatestCommonDivisor(9,18));
 //        System.out.println(GreatestCommonDivisor.getGreatestCommonDivisor(81,153));
 
-        FactorPrinter.printFactors(6);
+//        FactorPrinter.printFactors(6);
+        System.out.println( PerfectNumber.isPerfectNumber( 6 ));
+        System.out.println( PerfectNumber.isPerfectNumber( 28));
+        System.out.println( PerfectNumber.isPerfectNumber( 5 ));
+        System.out.println( PerfectNumber.isPerfectNumber( -1 ));
     }
 }
