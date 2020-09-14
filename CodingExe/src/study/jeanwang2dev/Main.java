@@ -82,21 +82,24 @@ public class Main {
 //        NumberToWords.numberToWords(-1007);
 
 //        System.out.println("***********");
-        System.out.println(NumberToWords.reverse(0));
-
-        System.out.println("***********");
-        System.out.println(NumberToWords.getDigitCount(-12));
-
-        System.out.println("***********");
-        NumberToWords.numberToWords(0);
-
-        System.out.println("***********");
-        NumberToWords.numberToWords(1010);
-
-        System.out.println("***********");
-        NumberToWords.numberToWords(2000);
-
-        System.out.println("***********");
-        NumberToWords.numberToWords(-12);
+//        System.out.println(NumberToWords.reverse(0));
+//
+//        System.out.println("***********");
+//        System.out.println(NumberToWords.getDigitCount(-12));
+//
+//        System.out.println("***********");
+//        NumberToWords.numberToWords(0);
+//
+//        System.out.println("***********");
+//        NumberToWords.numberToWords(1010);
+//
+//        System.out.println("***********");
+//        NumberToWords.numberToWords(2000);
+//
+//        System.out.println("***********");
+//        NumberToWords.numberToWords(-12);
+        System.out.println( FlourPacker.canPack(1, 0, 4));
+        System.out.println( FlourPacker.canPack(1, 0, 5));
+        System.out.println( FlourPacker.canPack(0, 5, 4));
     }
 }
