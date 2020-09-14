@@ -74,9 +74,29 @@ public class Main {
 //        System.out.println(GreatestCommonDivisor.getGreatestCommonDivisor(81,153));
 
 //        FactorPrinter.printFactors(6);
-        System.out.println( PerfectNumber.isPerfectNumber( 6 ));
-        System.out.println( PerfectNumber.isPerfectNumber( 28));
-        System.out.println( PerfectNumber.isPerfectNumber( 5 ));
-        System.out.println( PerfectNumber.isPerfectNumber( -1 ));
+//        System.out.println( PerfectNumber.isPerfectNumber( 6 ));
+//        System.out.println( PerfectNumber.isPerfectNumber( 28));
+//        System.out.println( PerfectNumber.isPerfectNumber( 5 ));
+//        System.out.println( PerfectNumber.isPerfectNumber( -1 ));
+
+//        NumberToWords.numberToWords(-1007);
+
+//        System.out.println("***********");
+        System.out.println(NumberToWords.reverse(0));
+
+        System.out.println("***********");
+        System.out.println(NumberToWords.getDigitCount(-12));
+
+        System.out.println("***********");
+        NumberToWords.numberToWords(0);
+
+        System.out.println("***********");
+        NumberToWords.numberToWords(1010);
+
+        System.out.println("***********");
+        NumberToWords.numberToWords(2000);
+
+        System.out.println("***********");
+        NumberToWords.numberToWords(-12);
     }
 }
