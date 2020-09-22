@@ -1,8 +1,11 @@
 package study.jeanwang2dev;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
+
 //        System.out.println(AreaCalculator.area(5.0));
 //        System.out.println(AreaCalculator.area(-1));
 //        System.out.println(AreaCalculator.area(5.0, 4.0));
@@ -109,6 +112,8 @@ public class Main {
 //        System.out.println(LargestPrime.getLargestPrime(-1));
 //        System.out.println(LargestPrime.getLargestPrime(217));
 
-        DiagonalStar.printSquareStar(7);
+//        DiagonalStar.printSquareStar(7);
+
+        ReadingUserInputChallenge.readTenNums();
     }
 }
