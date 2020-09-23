@@ -6,6 +6,15 @@ public class Main {
 
     public static void main(String[] args) {
 
+        SimpleCalculator calculator= new SimpleCalculator();
+        calculator.setFirstNumber(5.0);
+        calculator.setSecondNumber(4);
+        System.out.println("add= " + calculator.getAdditionResult());
+        System.out.println("subtract= " + calculator.getSubtractionResult());
+        calculator.setFirstNumber(5.25);
+        calculator.setSecondNumber(0);
+        System.out.println("multiply= " + calculator.getMultiplicationResult());
+        System.out.println("divde=" + calculator.getDivisionResult());
 //        System.out.println(AreaCalculator.area(5.0));
 //        System.out.println(AreaCalculator.area(-1));
 //        System.out.println(AreaCalculator.area(5.0, 4.0));
@@ -117,11 +126,11 @@ public class Main {
 //        ReadingUserInputChallenge.readTenNums();
 //        MinAndMaxInputChallenge.getMinAndMax();
 //        InputCalculator.inputThenPrintSumAndAverage();
-        System.out.println(PaintJob.getBucketCount(-3.4,2.1, 1.5, 2));
-        System.out.println(PaintJob.getBucketCount(2.75,3.25, 2.5, 1));
-        System.out.println(PaintJob.getBucketCount(3.4, 2.1, 1.5));
-        System.out.println(PaintJob.getBucketCount(7.25, 4.3, 2.35));
-        System.out.println(PaintJob.getBucketCount( 3.4, 1.5));
-        System.out.println(PaintJob.getBucketCount( 3.26, 0.75));
+//        System.out.println(PaintJob.getBucketCount(-3.4,2.1, 1.5, 2));
+//        System.out.println(PaintJob.getBucketCount(2.75,3.25, 2.5, 1));
+//        System.out.println(PaintJob.getBucketCount(3.4, 2.1, 1.5));
+//        System.out.println(PaintJob.getBucketCount(7.25, 4.3, 2.35));
+//        System.out.println(PaintJob.getBucketCount( 3.4, 1.5));
+//        System.out.println(PaintJob.getBucketCount( 3.26, 0.75));
     }
 }
