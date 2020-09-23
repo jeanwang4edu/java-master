@@ -115,6 +115,7 @@ public class Main {
 //        DiagonalStar.printSquareStar(7);
 
 //        ReadingUserInputChallenge.readTenNums();
-        MinAndMaxInputChallenge.getMinAndMax();
+//        MinAndMaxInputChallenge.getMinAndMax();
+        InputCalculator.inputThenPrintSumAndAverage();
     }
 }
