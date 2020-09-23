@@ -114,6 +114,7 @@ public class Main {
 
 //        DiagonalStar.printSquareStar(7);
 
-        ReadingUserInputChallenge.readTenNums();
+//        ReadingUserInputChallenge.readTenNums();
+        MinAndMaxInputChallenge.getMinAndMax();
     }
 }
