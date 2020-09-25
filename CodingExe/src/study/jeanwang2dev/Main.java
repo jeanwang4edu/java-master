@@ -6,16 +6,23 @@ public class Main {
 
     public static void main(String[] args) {
 
-          Account accOne = new Account();
-          accOne.setNumber("001");
-          accOne.setBalance(120);
-          accOne.setCustomerName("Kate Smith");
-          accOne.setCustomerEmailAddress("kate@abc.com");
-          accOne.setCustomerPhoneNumber("(734)222-3465");
-          accOne.withdraw(300);
-          accOne.withdraw(10);
-          accOne.deposit(200);
-          System.out.printf("account number %s, customer name %s and the balance is %5.2f ", accOne.getNumber(), accOne.getCustomerName(), accOne.getBalance());
+          VipCustomer customer = new VipCustomer();
+          System.out.println( "customer: " + customer.getName() + " has credit limit: " + customer.getCredit_limit() + " and its email is: " + customer.getEmail_address() );
+          VipCustomer customer1 = new VipCustomer("Kate", 230.78, "kate@email.com");
+          System.out.println( "customer1: " + customer1.getName() + " has credit limit: " + customer1.getCredit_limit() + " and its email is: " + customer1.getEmail_address() );
+          VipCustomer customer2 = new VipCustomer(440.89d);
+          System.out.println( "customer2: " + customer2.getName() + " has credit limit: " + customer2.getCredit_limit() + " and its email is: " + customer2.getEmail_address() );
+
+//          Account accOne = new Account();
+//          accOne.setNumber("001");
+//          accOne.setBalance(120);
+//          accOne.setCustomerName("Kate Smith");
+//          accOne.setCustomerEmailAddress("kate@abc.com");
+//          accOne.setCustomerPhoneNumber("(734)222-3465");
+//          accOne.withdraw(300);
+//          accOne.withdraw(10);
+//          accOne.deposit(200);
+//          System.out.printf("account number %s, customer name %s and the balance is %5.2f ", accOne.getNumber(), accOne.getCustomerName(), accOne.getBalance());
 
 //          Person person = new Person();
 //          person.setFirstName("");
