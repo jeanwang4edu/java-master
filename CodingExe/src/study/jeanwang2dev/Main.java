@@ -1,24 +1,34 @@
 package study.jeanwang2dev;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
-          Person person = new Person();
-          person.setFirstName("");
-          person.setLastName("");
-          person.setAge(10);
-          System.out.println("fullName= " + person.getFullName());
-          System.out.println("teen= " + person.isTeen());
-          person.setFirstName("John");
-          person.setAge(18);
-          System.out.println("fullName= " + person.getFullName());
-          System.out.println("teen= " + person.isTeen());
-          person.setLastName("Smith");
-          System.out.println("fullName= " + person.getFullName());
+          Account accOne = new Account();
+          accOne.setNumber("001");
+          accOne.setBalance(120);
+          accOne.setCustomerName("Kate Smith");
+          accOne.setCustomerEmailAddress("kate@abc.com");
+          accOne.setCustomerPhoneNumber("(734)222-3465");
+          accOne.withdraw(300);
+          accOne.withdraw(10);
+          accOne.deposit(200);
+          System.out.printf("account number %s, customer name %s and the balance is %5.2f ", accOne.getNumber(), accOne.getCustomerName(), accOne.getBalance());
 
+//          Person person = new Person();
+//          person.setFirstName("");
+//          person.setLastName("");
+//          person.setAge(10);
+//          System.out.println("fullName= " + person.getFullName());
+//          System.out.println("teen= " + person.isTeen());
+//          person.setFirstName("John");
+//          person.setAge(18);
+//          System.out.println("fullName= " + person.getFullName());
+//          System.out.println("teen= " + person.isTeen());
+//          person.setLastName("Smith");
+//          System.out.println("fullName= " + person.getFullName());
 
 //        SimpleCalculator calculator= new SimpleCalculator();
 //        calculator.setFirstNumber(5.0);
