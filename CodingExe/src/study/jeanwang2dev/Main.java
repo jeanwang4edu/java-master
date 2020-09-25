@@ -6,12 +6,20 @@ public class Main {
 
     public static void main(String[] args) {
 
-          VipCustomer customer = new VipCustomer();
-          System.out.println( "customer: " + customer.getName() + " has credit limit: " + customer.getCredit_limit() + " and its email is: " + customer.getEmail_address() );
-          VipCustomer customer1 = new VipCustomer("Kate", 230.78, "kate@email.com");
-          System.out.println( "customer1: " + customer1.getName() + " has credit limit: " + customer1.getCredit_limit() + " and its email is: " + customer1.getEmail_address() );
-          VipCustomer customer2 = new VipCustomer(440.89d);
-          System.out.println( "customer2: " + customer2.getName() + " has credit limit: " + customer2.getCredit_limit() + " and its email is: " + customer2.getEmail_address() );
+          Wall wall = new Wall(1.125,-1.0);
+          System.out.println("area= " + wall.getArea());
+
+          wall.setHeight(-1.5);
+          System.out.println("width= " + wall.getWidth());
+          System.out.println("height= " + wall.getHeight());
+          System.out.println("area= " + wall.getArea());
+
+//          VipCustomer customer = new VipCustomer();
+//          System.out.println( "customer: " + customer.getName() + " has credit limit: " + customer.getCredit_limit() + " and its email is: " + customer.getEmail_address() );
+//          VipCustomer customer1 = new VipCustomer("Kate", 230.78, "kate@email.com");
+//          System.out.println( "customer1: " + customer1.getName() + " has credit limit: " + customer1.getCredit_limit() + " and its email is: " + customer1.getEmail_address() );
+//          VipCustomer customer2 = new VipCustomer(440.89d);
+//          System.out.println( "customer2: " + customer2.getName() + " has credit limit: " + customer2.getCredit_limit() + " and its email is: " + customer2.getEmail_address() );
 
 //          Account accOne = new Account();
 //          accOne.setNumber("001");
