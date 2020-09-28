@@ -38,16 +38,31 @@ public class Main {
 //        System.out.println("cuboid.volume= " + cuboid.getVolume());
 
 
-         Bed bed = new Bed(79.5, 75.5, 10, "black");
-         Size lampSize = new Size(20.47, 11.35, 71);
-         FloorLamp lamp = new FloorLamp(100, "Incandescent", lampSize, "modern", "yellow");
-         Size bookshelfSize = new Size( 23.57, 9.5, 70.46);
-         Bookshelf bookshelf = new Bookshelf("Mainstay", "4SCYML", bookshelfSize, 29d, "Gray" );
-         Room myroom = new Room(bed, lamp, bookshelf);
-         System.out.println("My bed's color is " + myroom.getBed().getColor() );
-         myroom.getLamp().turnOn();
-         myroom.makeBed();
-         myroom.getBed().openDrawer();
+//         Bed bed = new Bed(79.5, 75.5, 10, "black");
+//         Size lampSize = new Size(20.47, 11.35, 71);
+//         FloorLamp lamp = new FloorLamp(100, "Incandescent", lampSize, "modern", "yellow");
+//         Size bookshelfSize = new Size( 23.57, 9.5, 70.46);
+//         Bookshelf bookshelf = new Bookshelf("Mainstay", "4SCYML", bookshelfSize, 29d, "Gray" );
+//         Room myroom = new Room(bed, lamp, bookshelf);
+//         System.out.println("My bed's color is " + myroom.getBed().getColor() );
+//         myroom.getLamp().turnOn();
+//         myroom.makeBed();
+//         myroom.getBed().openDrawer();
+
+        Printer printerOne = new Printer();
+        printerOne.print(109);
+        System.out.printf("printerOne has printed %d pages%n", printerOne.getNumOfPagesPrinted());
+        System.out.printf("printerOne has %3.2f percent toner left%n", printerOne.getTonerLevel());
+        printerOne.fillUpToner();
+        printerOne.print(100);
+        System.out.printf("printerOne has printed %d pages%n", printerOne.getNumOfPagesPrinted());
+        System.out.printf("printerOne has %3.2f percent toner left%n", printerOne.getTonerLevel());
+
+        Printer printerTwo = new Printer( 90, 13, true);
+        printerTwo.print(200);
+        System.out.printf("printerTwo has printed %d pages%n", printerTwo.getNumOfPagesPrinted());
+        System.out.printf("printerTwo has %3.2f percent toner left%n", printerTwo.getTonerLevel());
+
 
 
 
