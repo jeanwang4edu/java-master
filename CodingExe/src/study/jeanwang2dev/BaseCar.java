@@ -1,6 +1,6 @@
 package study.jeanwang2dev;
 
-public class Car {
+public class BaseCar {
 
     private int doors;
     private int wheels;

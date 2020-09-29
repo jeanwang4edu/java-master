@@ -2,21 +2,140 @@ package study.jeanwang2dev;
 
 //import java.util.Scanner;
 
+class Car {
+
+    private String name;
+    private boolean engine;
+    private int cylinder;
+    private int wheels;
+
+    public Car(String name, int cylinder) {
+        this.name = name;
+        this.cylinder = cylinder;
+        this.wheels = 4;
+        this.engine = true;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getCylinder() {
+        return cylinder;
+    }
+
+    public void startEngine(){
+        System.out.println("Car Start Engine");
+    }
+
+    public void accelerate(){
+        System.out.println("Car accelerates");
+    }
+
+    public void brake(){
+        System.out.println("Car brake");
+    }
+
+}
+
+class Outlander extends Car {
+
+    public Outlander() {
+        super("Outlander", 6);
+    }
+
+    @Override
+    public void startEngine() {
+        System.out.println("Outlander Start Engine");
+    }
+
+    @Override
+    public void accelerate() {
+        System.out.println("Outlander accelerates");
+    }
+
+    @Override
+    public void brake() {
+        System.out.println("Outlander brake");
+    }
+}
+
+class Accord extends Car {
+
+    public Accord() {
+        super("Accord", 6);
+    }
+
+    @Override
+    public void startEngine() {
+        System.out.println("Accord Start Engine");
+    }
+
+    @Override
+    public void accelerate() {
+        System.out.println("Accord accelerates");
+    }
+
+    @Override
+    public void brake() {
+        System.out.println("Accord brake");
+    }
+}
+
+class Mitsubishi extends Car {
+
+    public Mitsubishi() {
+        super("Mitsubishi", 6);
+    }
+
+    @Override
+    public void startEngine() {
+        System.out.println("Mitsubishi Start Engine");
+    }
+
+    @Override
+    public void accelerate() {
+        System.out.println("Mitsubishi accelerates");
+    }
+
+    @Override
+    public void brake() {
+        System.out.println("Mitsubishi brake");
+    }
+}
+
+
+
+
 public class Main {
 
     public static void main(String[] args) {
 
-        ComplexNumber one = new ComplexNumber(1.0, 1.0);
-        ComplexNumber number = new ComplexNumber(2.5, -1.5);
-        one.add(1,1);
-        System.out.println("one.real= " + one.getReal());
-        System.out.println("one.imaginary= " + one.getImaginary());
-        one.subtract(number);
-        System.out.println("one.real= " + one.getReal());
-        System.out.println("one.imaginary= " + one.getImaginary());
-        number.subtract(one);
-        System.out.println("number.real= " + number.getReal());
-        System.out.println("number.imaginary= " + number.getImaginary());
+        Car car = new Car("Base car",8);
+        car.startEngine();
+        car.accelerate();
+        car.brake();
+
+        Outlander outlander = new Outlander();
+        outlander.startEngine();
+        outlander.accelerate();
+        outlander.brake();
+
+        Accord accord = new Accord();
+        accord.startEngine();
+        accord.accelerate();
+        accord.brake();
+//        ComplexNumber one = new ComplexNumber(1.0, 1.0);
+//        ComplexNumber number = new ComplexNumber(2.5, -1.5);
+//        one.add(1,1);
+//        System.out.println("one.real= " + one.getReal());
+//        System.out.println("one.imaginary= " + one.getImaginary());
+//        one.subtract(number);
+//        System.out.println("one.real= " + one.getReal());
+//        System.out.println("one.imaginary= " + one.getImaginary());
+//        number.subtract(one);
+//        System.out.println("number.real= " + number.getReal());
+//        System.out.println("number.imaginary= " + number.getImaginary());
 //        Point first = new Point(6,5);
 //        Point second = new Point(3,1);
 //        System.out.println("distance(0,0)= " + first.distance() );
@@ -71,7 +190,7 @@ public class Main {
 //        calculator.setFirstNumber(5.25);
 //        calculator.setSecondNumber(0);
 //        System.out.println("multiply= " + calculator.getMultiplicationResult());
-//        System.out.println("divde=" + calculator.getDivisionResult());
+//        System.out.println("divide=" + calculator.getDivisionResult());
 //        System.out.println(AreaCalculator.area(5.0));
 //        System.out.println(AreaCalculator.area(-1));
 //        System.out.println(AreaCalculator.area(5.0, 4.0));
