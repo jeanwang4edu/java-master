@@ -1,7 +1,6 @@
 package study.jeanwang2dev;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -31,7 +30,6 @@ public class Main {
             } else {
                 System.out.println("Invalid number, please try again: ");
                 scanner.nextLine();
-                continue;
             }
         }
         return inputArr;
