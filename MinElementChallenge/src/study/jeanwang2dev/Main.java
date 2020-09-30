@@ -7,7 +7,7 @@ public class Main {
     private final static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int count = 0;
+        int count;
         System.out.println("Please enter the number of integers you want to have in the array");
         while(true) {
             if (scanner.hasNextInt()) {
