@@ -25,9 +25,9 @@ public class Customer {
         System.out.printf("Customer Name: %s %n", this.getName());
         for(int i = 0; i < transactions.size(); i++){
             if(i == 0){
-                System.out.println("Initial Transaction: " + transactions.get(i).intValue());
+                System.out.println("[" + (i+1) + "] " + "Initial Transaction: " + transactions.get(i).intValue());
             } else {
-                System.out.println("Transaction(" +  (i+1) + "): " +  transactions.get(i).intValue());
+                System.out.println("[" +  (i+1) + "] Transaction: "  +  transactions.get(i).intValue());
             }
         }
     }
