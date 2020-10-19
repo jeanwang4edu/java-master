@@ -27,5 +27,8 @@ public class Main {
         bank.listBranchCustomers("Maple", true);
         bank.listBranchCustomers("Main Street",false);
 
+        bank.addCustomerForBranch("Jane", 30d, "Mapule");
+        bank.addBranch("Main Street");
+
     }
 }
