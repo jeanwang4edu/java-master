@@ -28,8 +28,22 @@ public class Main {
         // Create a new project and add your Series library, then test the
         // three methods in the main() method of your new project.
         Series series = new Series();
-        System.out.println("test Sum of 7 : " + series.nSum( 7));
-        System.out.println("test factorial of 7 : " + series.factorial( 7));
-        System.out.println("test fibonacci of 7 : " + series.fibonacci( 7));
+        System.out.println("Sum :");
+        for( int i = 0; i <= 10; i++){
+            System.out.print(series.nSum(i) + ", ");
+        }
+        System.out.println();
+
+        System.out.println("Factorial :");
+        for( int i = 0; i <= 10; i++){
+            System.out.print(series.factorial(i) + ", ");
+        }
+        System.out.println();
+
+        System.out.println("Fibonacci :");
+        for( int i = 0; i <= 10; i++){
+            System.out.print(series.fibonacci(i) + ", ");
+        }
+        System.out.println();
     }
 }
