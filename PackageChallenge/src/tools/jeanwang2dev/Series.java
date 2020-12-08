@@ -20,7 +20,7 @@ public class Series {
         if( n == 1 ) return 1;
         // when n is bigger than or equal to 2
         long nMinus1 = 1, nMinus2 = 0, fib = 0;
-        int counter = 0;
+        int counter = 2;
         while( counter <= n ){
             fib = nMinus1 + nMinus2;
             nMinus2 = nMinus1;
