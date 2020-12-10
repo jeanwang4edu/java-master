@@ -11,9 +11,6 @@ public class Main {
         System.out.println(two.getInstanceNumber());
         System.out.println(three.getInstanceNumber());
 
-        // the lines below will give an error
-//        two.name = "kate";
-//        Math math = new Math();
         String pw = "IamPassword%@37";
         Password password = new Password(pw);
         password.storePassword();
@@ -35,5 +32,10 @@ public class Main {
 //        System.out.println(originalString);
 //        System.out.println(encryptedString);
 //        System.out.println(decryptedString);
+
+        System.out.println("The owner of SIBTest is " + SIBTest.owner);
+        SIBTest sibtest = new SIBTest();
+        sibtest.someMethod();
+
     }
 }
