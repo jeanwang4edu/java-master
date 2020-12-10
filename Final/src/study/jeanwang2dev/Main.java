@@ -17,7 +17,10 @@ public class Main {
         String pw = "IamPassword%@37";
         Password password = new Password(pw);
         password.storePassword();
-        System.out.println("In or not: " + password.letMeIn("IamPassword%@3"));
+
+        password.letMeIn("abc");
+        password.letMeIn("IamPassword%@37");
+        password.letMeIn("dfsdfasdf");
 
         int testNum = 5;
         int key = 6;
