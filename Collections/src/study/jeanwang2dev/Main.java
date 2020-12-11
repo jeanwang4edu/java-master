@@ -89,6 +89,16 @@ public class Main {
         arrIntTwo.add(33);
 
         Collections.copy(arrIntTwo, arrIntOne);
+
+        for(int value : arrIntTwo){
+            System.out.println("Array Two value: " + value);
+        }
+
+        arrIntOne.set(2, 89);
+        for(int value : arrIntOne){
+            System.out.println("Array One value: " + value);
+        }
+
         for(int value : arrIntTwo){
             System.out.println("Array Two value: " + value);
         }
