@@ -91,7 +91,7 @@ public class Main {
         // Create a set for all the moons in solar System
         Set<HeavenlyBody> moonSet = new HashSet<>();
         for(HeavenlyBody planet: planets){
-            System.out.println("adding moon set for planet ---" + planet.getName());
+//            System.out.println("adding moon set for planet ---" + planet.getName());
             moonSet.addAll( planet.getSatellites() );
         }
 
@@ -100,6 +100,18 @@ public class Main {
         for(HeavenlyBody moon: moonSet){
             System.out.println("\t" + moon.getName());
         }
+
+        HeavenlyBody newHB = new HeavenlyBody("Pluto", 842 );
+        planets.add(newHB);
+        System.out.println("Planets");
+        for(HeavenlyBody planet: planets){
+            System.out.println("\t" + planet.getName() + " -- " + planet.getOrbitalPeriod());
+        }
+
+        Object o = new Object();
+        o.equals(o);
+        "pluto".equals("");
+
 
     }
 }
