@@ -21,21 +21,16 @@ public class Main {
         locations.get(1).addExit("S", 4);
         locations.get(1).addExit("W", 2);
         locations.get(1).addExit("E", 3);
-//        locations.get(1).addExit("Q",0);
 
         locations.get(2).addExit("N", 5);
-//        locations.get(2).addExit("Q",0);
 
         locations.get(3).addExit("W", 1);
-//        locations.get(3).addExit("Q", 0);
 
         locations.get(4).addExit("N", 1);
         locations.get(4).addExit("W", 2);
-//        locations.get(4).addExit("Q", 0);
 
         locations.get(5).addExit("S", 1);
         locations.get(5).addExit("W", 2);
-//        locations.get(5).addExit("Q", 0);
 
         int loc = 1;
         while( true ){
@@ -53,11 +48,40 @@ public class Main {
 
             String direction = scanner.nextLine().toUpperCase();
 
-            if(exits.containsKey(direction)) {
+            // change the program to allow players to type full words
+            // or phrases, then move to the correct location based upon their input
+            // the player should be able to type commands such as "Go West", "run South" or just "East"
+            // and the program will move to the appropriate location if there is one.
+            // the single character command should still works
+
+            Map<String, String> wordMap = new HashMap<>();
+            wordMap.put("NORTH", "N");
+            wordMap.put("SOUTH", "S");
+            wordMap.put("EAST", "E");
+            wordMap.put("WEST", "W");
+            wordMap.put("QUIT", "Q");
+
+            if( direction.length() > 1 ) {
+                // if the input direction is not single character
+                // split the direction into String array
+                String[] wordsArr = direction.split(" ");
+                for (String word : wordsArr) {
+                    if (wordMap.containsKey(word)) {
+                        if (exits.containsKey(wordMap.get(word))) {
+                            direction = wordMap.get(word);
+                            break;
+                        }
+                    }
+                }
+            }
+
+            if( exits.containsKey( direction ) ) {
                 loc = exits.get(direction);
             } else {
                 System.out.println("You can not go in that direction");
             }
+
+
 
         }
 
