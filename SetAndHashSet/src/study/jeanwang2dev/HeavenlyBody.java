@@ -39,10 +39,11 @@ public final class HeavenlyBody {
         if(this == obj){
             return true;
         }
-
-        System.out.println("obj.getClass() is " + obj.getClass());
-        System.out.println("this.getClass() is " + this.getClass());
-        if( obj == null || obj.getClass() != this.getClass() ){
+//
+//        System.out.println("obj.getClass() is " + obj.getClass());
+//        System.out.println("this.getClass() is " + this.getClass());
+//        if( obj == null || obj.getClass() != this.getClass() ){
+        if( obj == null){
             return false;
         }
         String objName = ((HeavenlyBody)obj).getName();
