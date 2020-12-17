@@ -6,7 +6,7 @@ import java.util.Set;
 /**
  * Created by jean on 12/17/20.
  */
-public class HeavenlyBody {
+public abstract class HeavenlyBody {
 
 //    Create class HeavenlyBody with: name, orbitalPeriod (double), and a set of satellites.
 //    Create a constructor initializing only first two, and just creating new HashSet.
@@ -23,29 +23,42 @@ public class HeavenlyBody {
 //    Override hashCode() method, applying the default hashCode method to this name plus adding an arbitrary number (e.g. 57)
 //    to ensure the hash code is not zero.
 
-    private final String name;
+    private final Key key;
     private final double orbitalPeriod;
     // final means that the variable cannot be re-bound to reference another object,
     // but internal state of the object pointed by that reference variable can be changed
     // i.e. you can add or remove elements from final array or final collection
     private final Set<HeavenlyBody> satellites;
 
-    public HeavenlyBody(String name, double orbitalPeriod) {
-        this.name = name;
+    public enum BodyTypes {
+        STAR,
+        PLANET,
+        COMET,
+        ASTEROID,
+        DWARF_PLANET,
+        MOON
+    }
+
+    public HeavenlyBody(String name, double orbitalPeriod, BodyTypes bodyType) {
+        this.key = new Key(name, bodyType);
         this.orbitalPeriod = orbitalPeriod;
         this.satellites = new HashSet<>();
     }
 
-    public String getName() {
-        return name;
+    public static Key generateKey(String name, BodyTypes bodyTypes){
+        return new Key(name, bodyTypes);
+    }
+
+    public boolean addSatellite(HeavenlyBody body){
+        return this.satellites.add(body);
+    }
+
+    public Key getKey() {
+        return key;
     }
 
     public double getOrbitalPeriod() {
         return orbitalPeriod;
-    }
-
-    public boolean addMoon(HeavenlyBody moon){
-        return this.satellites.add(moon);
     }
 
     public Set<HeavenlyBody> getSatellites() {
@@ -62,22 +75,66 @@ public class HeavenlyBody {
             return false;
         }
 
-//        if( obj.getClass() == this.getClass()) {
-            return this.name.equals(((HeavenlyBody) obj).getName());
-//        }
-//
-//        return false;
+        if( obj instanceof HeavenlyBody) {
+            return this.key.equals( ((HeavenlyBody) obj).key);
+        }
+
+        return false;
 
     }
 
     @Override
     public int hashCode() {
-        return this.name.hashCode() + 31;
+        return this.key.hashCode();
     }
 
     @Override
     public String toString() {
-        return this.name + " -- OrbitalPeriod: " + this.orbitalPeriod;
+        return this.key + " : " + this.orbitalPeriod;
+    }
+
+    public static final class Key {
+
+        private final String name;
+        private final BodyTypes bodyType;
+
+        public Key(String name, BodyTypes bodyType) {
+            this.name = name;
+            this.bodyType = bodyType;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public BodyTypes getBodyType() {
+            return bodyType;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if( this == obj) {
+                return true;
+            }
+            if( obj == null) {
+                return false;
+            }
+            Key theObj = (Key) obj;
+            if( this.getName().equals(theObj.getName()) ){
+                return ( this.getBodyType() == theObj.getBodyType() );
+            }
+            return false;
+        }
+
+        @Override
+        public int hashCode() {
+            return this.name.hashCode() + 31 + this.bodyType.hashCode();
+        }
+
+        @Override
+        public String toString() {
+            return this.name + " : " + this.bodyType;
+        }
     }
 
 }
